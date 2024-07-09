@@ -95,6 +95,7 @@ create_file() {
   if [ $file_format == "pdf" ]; then
     echo "Converting to pdf..."
     magick -page A4 $($ls -v $image_dir*.jpg) $image_dir$name-$chapterNumber.pdf
+
     rm $image_dir/*.jpg
     clear
     $pdf_viewer $image_dir$name-$chapterNumber.pdf &
