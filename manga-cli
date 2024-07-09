@@ -102,7 +102,7 @@ create_file() {
   else
 
     echo "Converting to cbz..."
-    zip -q $image_dir$name-$chapterNumber.cbz $image_dir*.jpg
+    magick -page A4 $($ls -v $image_dir*.jpg) $image_dir$name-$chapterNumber.cbz
 
     rm $image_dir/*.jpg
     clear
