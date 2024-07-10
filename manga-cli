@@ -103,11 +103,8 @@ create_file() {
   else
 
     echo "Converting to cbz..."
-<<<<<<< HEAD
     mogrify -extent 1440x1100 $image_dir*.jpg && zip -q $image_dir$name-$chapterNumber.cbz $image_dir*.jpg
-=======
     zip -q $image_dir$name-$chapterNumber.cbz $image_dir*.jpg
->>>>>>> parent of f827ac0 (solve image cropping while convert into cbz format)
 
     rm $image_dir/*.jpg
     clear
